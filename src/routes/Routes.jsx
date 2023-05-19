@@ -1,9 +1,5 @@
 import React from "react";
-import {
-  BrowserRouter as Router,
-  Routes as RRoute,
-  Route,
-} from "react-router-dom";
+import { Routes as RRoute, Route } from "react-router-dom";
 
 const Routes = () => {
   return (
