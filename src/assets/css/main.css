@@ -1,4 +1,4 @@
-:root {
+/* :root {
   --bg: #181818;
 }
 
@@ -12,4 +12,175 @@
 body{
     color: white;
     background-color: var(--bg);
+} */
+
+/* colors */
+@property --hue {
+  syntax: "<number>";
+  inherits: true;
+  initial-value: 0;
+}
+/* move border */
+@property --bg-y {
+  syntax: "<number>";
+  inherits: true;
+  initial-value: 0;
+}
+@property --bg-x {
+  syntax: "<number>";
+  inherits: true;
+  initial-value: 0;
+}
+/* animation hover */
+@property --glow-translate-y {
+  syntax: "<number>";
+  inherits: true;
+  initial-value: 0;
+}
+@property --bg-size {
+  syntax: "<number>";
+  inherits: true;
+  initial-value: 0;
+}
+
+:root {
+  --debug: 0;
+  --supported: 0;
+  --not-supported: 0;
+  --card-color: hsl(260deg 100% 3%);
+  --text-color: hsl(260deg 10% 55%);
+  --card-radius: 3.6vw;
+  --card-width: 35vw;
+  --border-width: 3px;
+  --bg-size: 1;
+  --hue: 0;
+  --hue-speed: 1;
+  --rotate: 0;
+  --animation-speed: 4s;
+  --interaction-speed: 0.55s;
+  --glow-scale: 1.5;
+  --scale-factor: 1;
+  --glow-blur: 6;
+  --glow-opacity: 1;
+  --glow-radius: 100;
+  --glow-rotate-unit: 1deg;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* settings width */
+.main {
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+}
+
+/* stop animate border */
+.main:hover > .imagesRonaldo:before {
+  --bg-size: 15;
+  animation-play-state: paused;
+}
+
+/* .imagesRonaldo {
+  -webkit-mask-box-image: url(../images/ronaldojv.png);
+  width: 100px;
+  min-height: 150px;
+} */
+
+.hidden{
+  visibility: hidden;
+}
+
+/* card config*/
+.imagesRonaldo {
+  /* position: absolute; */
+  background: var(--card-color);
+  border-radius: calc(calc(var(--card-radius) * 0.9));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  color: var(--text-color);
+  padding: 100px;
+}
+
+.main > .imagesRonaldo:before {
+  content: "";
+  position: absolute;
+  /* el borde */
+  border-radius: calc(calc(var(--card-radius) * 0.9));
+  z-index: -1;
+  background: #292929
+    radial-gradient(
+      30% 30% at calc(var(--bg-x) * 1%) calc(var(--bg-y) * 1%),
+      hsl(calc(calc(var(--hue) * var(--hue-speed)) * 1deg), 100%, 90%)
+        calc(0% * var(--bg-size)),
+      hsl(calc(calc(var(--hue) * var(--hue-speed)) * 1deg), 100%, 80%)
+        calc(20% * var(--bg-size)),
+      hsl(calc(calc(var(--hue) * var(--hue-speed)) * 1deg), 100%, 60%)
+        calc(40% * var(--bg-size)),
+      transparent 100%
+    );
+  width: calc(100% + var(--border-width));
+  height: calc(100% + var(--border-width));
+  /* move colors animation */
+  animation: hue-animation var(--animation-speed) linear infinite,
+    rotate-bg var(--animation-speed) linear infinite;
+  transition: --bg-size var(--interaction-speed) ease;
+}
+
+
+/* keframe border animate */
+@keyframes rotate-bg {
+  0% {
+    --bg-x: 0;
+    --bg-y: 0;
+  }
+  25% {
+    --bg-x: 100;
+    --bg-y: 0;
+  }
+  50% {
+    --bg-x: 100;
+    --bg-y: 100;
+  }
+  75% {
+    --bg-x: 0;
+    --bg-y: 100;
+  }
+  100% {
+    --bg-x: 0;
+    --bg-y: 0;
+  }
+}
+
+/* iteracion en los colores */
+@keyframes hue-animation {
+  0% {
+    --hue: 0;
+  }
+  100% {
+    --hue: 360;
+  }
+}
+
+/* my styles */
+
+.imagesRonaldo img{
+  width: 400px;
 }
