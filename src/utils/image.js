@@ -1,3 +1,3 @@
-import ronaldoJV from "../assets/images/ronaldojv.png";
+import ronaldoJV from "../assets/images/ronaldomd.png";
 
 export { ronaldoJV };
