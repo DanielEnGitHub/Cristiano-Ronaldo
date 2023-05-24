@@ -7,7 +7,8 @@
   --animation-speed: 4s;
   --interaction-speed: 0.55s;
   --width-img: 400px;
-  --bg: #181818;
+  /* --bg: #181818; */
+  --bg: black;
 }
 
 @font-face {
@@ -88,7 +89,7 @@ body {
 }
 
 .main {
-  -webkit-mask-box-image: url(../images/ronaldomd.png);
+  -webkit-mask-box-image: url(../images/ronaldojv.png);
   width: var(--width-img);
 }
 
