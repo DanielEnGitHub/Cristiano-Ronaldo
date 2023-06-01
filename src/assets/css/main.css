@@ -6,11 +6,14 @@
   --rotate: 0;
   --animation-speed: 4s;
   --interaction-speed: 0.55s;
-  --width-img: 400px;
+  --width-img: 600px;
   /* --bg: #181818; */
   --bg: black;
+  --yellow: #f5fc00;
 }
 
+/* FONTS */
+@import url("https://fonts.googleapis.com/css2?family=Arizonia&family=Quicksand:wght@300&display=swap");
 @font-face {
   font-family: "CR7FONT";
   src: url("../../assets/fonts/CR7FONT.ttf") format("truetype");
@@ -52,6 +55,7 @@ body {
   color: white;
   margin: 0;
   padding: 0;
+  font-family: "Roboto", sans-serif;
 }
 
 .principal {
@@ -89,7 +93,7 @@ body {
 }
 
 .main {
-  -webkit-mask-box-image: url(../images/ronaldojv.png);
+  -webkit-mask-box-image: url(../images/ronaldomd.png);
   width: var(--width-img);
 }
 
@@ -103,15 +107,12 @@ body {
   content: "";
   position: absolute;
   z-index: -1;
-  background: var(--bg)
+  background: transparent
     radial-gradient(
       75% 75% at calc(var(--bg-x) * 1%) calc(var(--bg-y) * 1%),
-      hsl(calc(calc(var(--hue) * var(--hue-speed)) * 1deg), 100%, 90%)
-        calc(0% * var(--bg-size)),
-      hsl(calc(calc(var(--hue) * var(--hue-speed)) * 1deg), 100%, 80%)
-        calc(20% * var(--bg-size)),
-      hsl(calc(calc(var(--hue) * var(--hue-speed)) * 1deg), 100%, 60%)
-        calc(40% * var(--bg-size)),
+      var(--yellow) calc(0% * var(--bg-size)),
+      var(--yellow) calc(20% * var(--bg-size)),
+      var(--yellow) calc(40% * var(--bg-size)),
       transparent 100%
     );
   width: 100%;
