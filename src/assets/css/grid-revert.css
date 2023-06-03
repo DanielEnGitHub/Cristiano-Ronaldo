@@ -1,0 +1,7 @@
+.card-1-content-revert {
+  grid-column: 1 / 3;
+}
+
+.card-2-revert {
+  justify-content: end;
+}

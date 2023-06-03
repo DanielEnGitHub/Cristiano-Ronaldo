@@ -1,7 +1,7 @@
 import React from "react";
 import ImageBorder from "../../components/ImageBorder/ImageBorder";
 import PhraseComponent from "../../components/PhraseComponent";
-import { ronaldoJV } from "../../utils/image";
+import { cr7_1 } from "../../utils/image";
 
 const Phrase = () => {
   return (
@@ -12,7 +12,7 @@ const Phrase = () => {
         }
         isPhrase
       />
-      <ImageBorder imageURL={ronaldoJV} />
+      <ImageBorder imageURL={cr7_1} />
     </>
   );
 };

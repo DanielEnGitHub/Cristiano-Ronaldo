@@ -1,7 +1,20 @@
 import React from "react";
+import ImageBorder from "../../components/ImageBorder/ImageBorder";
+import PhraseComponent from "../../components/PhraseComponent";
+import { cr7_4 } from "../../utils/image";
 
 const Date = () => {
-  return <div>Date</div>;
+  return (
+    <>
+      <ImageBorder imageURL={cr7_4} revert />
+      <PhraseComponent
+        text={
+          "Cristiano Ronaldo nació el 5 de febrero de 1985 en Funchal, Madeira, Portugal. Desde muy joven mostró un gran talento para el fútbol y comenzó su carrera en el club local, el Sporting de Lisboa."
+        }
+        revert
+      />
+    </>
+  );
 };
 
 export default Date;

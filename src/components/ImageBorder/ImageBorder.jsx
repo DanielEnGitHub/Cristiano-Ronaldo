@@ -2,7 +2,7 @@ import React from "react";
 
 const ImageBorder = ({ imageURL, revert = false }) => {
   return (
-    <div className="card-2">
+    <div className={`card-2 ${revert && "card-2-revert"}`}>
       <div className="principal">
         <div className="container">
           <div className="main" style={{ "--image-url": `url(${imageURL})` }}>
