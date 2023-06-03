@@ -18,7 +18,14 @@ const Routes = () => {
           </Main>
         }
       />
-      <Route path="/date" element={<Date />} />
+      <Route
+        path="/date"
+        element={
+          <Main>
+            <Date />
+          </Main>
+        }
+      />
       <Route path="/create" element={<Create />} />
     </RRoute>
   );

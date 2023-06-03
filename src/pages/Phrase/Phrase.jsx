@@ -1,26 +1,18 @@
 import React from "react";
+import ImageBorder from "../../components/ImageBorder/ImageBorder";
+import PhraseComponent from "../../components/PhraseComponent";
 import { ronaldoJV } from "../../utils/image";
 
 const Phrase = () => {
   return (
     <>
-      {/* <div className="main">
-        <div className="imagesRonaldo">
-          <img src={ronaldoJV} alt="ronaldojv.png" />
-        </div>
-      </div> */}
-      <div className="principal">
-
-      <div className="container">
-        <div className="main">
-          <img src={ronaldoJV} alt="ronaldojv.png" className="hidden" />
-        </div>
-        <img src={ronaldoJV} className="imageRonaldo" />
-      </div>
-      </div>
-
-      {/* <img src={ronaldoJV} alt="ronaldojv.png" /> */}
-      {/* <span className="imagesRonaldo">HOLA</span> */}
+      <PhraseComponent
+        text={
+          "Siempre me esfuerzo al máximo para superar mis propios límites y alcanzar la grandeza."
+        }
+        isPhrase
+      />
+      <ImageBorder imageURL={ronaldoJV} />
     </>
   );
 };

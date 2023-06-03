@@ -10,6 +10,7 @@
   /* --bg: #181818; */
   --bg: black;
   --yellow: #f5fc00;
+  --image-url: url(../images/ronaldomd.png);
 }
 
 /* FONTS */
@@ -93,7 +94,7 @@ body {
 }
 
 .main {
-  -webkit-mask-box-image: url(../images/ronaldomd.png);
+  -webkit-mask-box-image: var(--image-url);
   width: var(--width-img);
 }
 
