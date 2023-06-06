@@ -5,6 +5,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 import "./assets/css/main.css";
 import "./assets/css/grid.css";
 import "./assets/css/grid-revert.css";
+import "./assets/css/navigation.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>

@@ -26,7 +26,7 @@ const Routes = () => {
         }
       />
       <Route
-        path="/date"
+        path="/information"
         element={
           <Main showBG>
             <Date />
