@@ -1,4 +1,5 @@
 import React from "react";
+import YouTube from "react-youtube";
 import { cr7PNG } from "../../utils/image";
 import "./home.css";
 import YouTubePlayer from "./YouTubePlayer";
@@ -23,8 +24,7 @@ const Home = () => {
         {/* A6O67uLJfcQ funny */}
         {/* IzWILktUcvw funny */}
         {/* mx23FPdylP0 relax */}
-        
-        
+        {/* -YAORUfS9-k celebration */}
       </div>
     </>
   );

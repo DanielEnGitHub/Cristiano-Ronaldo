@@ -1,46 +1,26 @@
-import React, { useEffect } from "react";
+import React from "react";
+import YouTube from "react-youtube";
 
-const YouTubePlayer = ({videoID}) => {
-  useEffect(() => {
-    // Cargar el reproductor de YouTube
-    const tag = document.createElement("script");
-    tag.src = "https://www.youtube.com/iframe_api";
-    const firstScriptTag = document.getElementsByTagName("script")[0];
-    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-    let player;
-
-    // Función para inicializar el reproductor de YouTube
-    window.onYouTubeIframeAPIReady = () => {
-      player = new window.YT.Player("player", {
-        videoId: videoID, // Coloca aquí la ID de tu video
+const YouTubePlayer = ({ videoID }) => {
+  return (
+    <YouTube
+      className="video-yt"
+      videoId={videoID}
+      opts={{
         playerVars: {
-          autoplay: 1,
-          controls: 0,
-          disablekb: 1,
-          loop: 1,
-          mute: 1,
-          playlist: videoID, // Reproduce la misma ID de video en bucle
+          autoplay: 1, // Activa la reproducción automática
+          loop: 1, // Reproduce el video en bucle
+          controls: 0, // Desactiva los controles del reproductor
+          disablekb: 1, // Desactiva las teclas del reproductor
+          playlist: videoID,
         },
-        events: {
-          onReady: onPlayerReady,
-        },
-      });
-    };
-
-    // Función para reproducir el video cuando esté listo
-    const onPlayerReady = (event) => {
-      event.target.playVideo();
-    };
-
-    // Limpieza al desmontar el componente
-    return () => {
-      // player.destroy();
-      window.onYouTubeIframeAPIReady = null;
-    };
-  }, []);
-
-  return <div id="player"></div>;
+      }}
+      onReady={(event) => {
+        event.target.mute(); // Mute el video
+        event.target.playVideo(); // Inicia la reproducción del video
+      }}
+    />
+  );
 };
 
 export default YouTubePlayer;

@@ -9,11 +9,18 @@ import Phrase from "../pages/Phrase";
 const Routes = () => {
   return (
     <RRoute>
-      <Route path="/" element={<Home />} />
+      <Route
+        path="/"
+        element={
+          <Main isHome>
+            <Home />
+          </Main>
+        }
+      />
       <Route
         path="/phrase"
         element={
-          <Main>
+          <Main showBG>
             <Phrase />
           </Main>
         }
@@ -21,7 +28,7 @@ const Routes = () => {
       <Route
         path="/date"
         element={
-          <Main>
+          <Main showBG>
             <Date />
           </Main>
         }

@@ -3,7 +3,13 @@
   grid-template-columns: 7fr 7fr 1fr;
   grid-template-rows: repeat(1, 100%);
   grid-gap: 5px;
-  /* direction: rtl; */
+}
+
+.main-bg-home {
+  display: grid;
+  grid-template-columns: 14fr 1fr;
+  grid-template-rows: repeat(1, 100%);
+  grid-gap: 5px;
 }
 
 /* CARD 1 */
