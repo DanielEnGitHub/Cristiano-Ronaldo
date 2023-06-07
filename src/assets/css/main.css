@@ -6,11 +6,19 @@
   --rotate: 0;
   --animation-speed: 4s;
   --interaction-speed: 0.55s;
-  --width-img: 600px;
+  --width-img: 100%;
   /* --bg: #181818; */
   --bg: black;
   --yellow: #f5fc00;
   --image-url: url(../images/ronaldomd.png);
+
+  /* medidas */
+  --sm: 480px;
+  --md: 768px;
+  --lg: 992px;
+  --lg: 992px;
+  --xl: 1280px;
+  --2xl: 1536px;
 }
 
 /* FONTS */
@@ -60,9 +68,8 @@ body {
 }
 
 .principal {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  max-height: 990px;
+  max-width: 580px;
 }
 
 .container {
