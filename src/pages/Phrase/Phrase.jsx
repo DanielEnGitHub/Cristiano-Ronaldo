@@ -3,11 +3,13 @@ import ImageBorder from "../../components/ImageBorder/ImageBorder";
 import PhraseComponent from "../../components/PhraseComponent";
 import { cr7_8 } from "../../utils/image";
 import useOpenai from "../../hooks/useOpenai";
+import { useToggleContext } from "../../components/Context/Contex";
 
 const Phrase = () => {
   const { text, getResponse } = useOpenai(
     "Dime una frase de Cristiano Ronaldo."
   );
+  const toogle = useToggleContext();
 
   return (
     <>
@@ -18,7 +20,7 @@ const Phrase = () => {
         }
         isPhrase
       />
-      <ImageBorder imageURL={cr7_8} onClick={getResponse} />
+      <ImageBorder imageURL={cr7_8} onClick={toogle ? () => {} : getResponse} />
     </>
   );
 };

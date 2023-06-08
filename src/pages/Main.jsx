@@ -27,14 +27,14 @@ const Main = ({ isHome, showBG = false, children }) => {
           >
             INCIO
           </Link>
-          <Link className={pathPhrase ? "navigation-active" : ""} to="/phrase">
-            FRASES
-          </Link>
           <Link
             className={pathInformation ? "navigation-active" : ""}
             to="/information"
           >
             DATOS
+          </Link>
+          <Link className={pathPhrase ? "navigation-active" : ""} to="/phrase">
+            FRASES
           </Link>
         </div>
       </div>
