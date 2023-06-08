@@ -21,6 +21,7 @@
   align-self: center;
   z-index: 1;
   font-size: 52px;
+  position: relative;
 }
 
 .card-1-content {

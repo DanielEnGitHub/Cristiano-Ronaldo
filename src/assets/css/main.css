@@ -200,3 +200,11 @@ body {
     height: 60%;
   }
 }
+
+.blur {
+  filter: blur(4.5px);
+}
+
+.cursos-disabled {
+  cursor: not-allowed;
+}
