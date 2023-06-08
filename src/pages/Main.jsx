@@ -15,7 +15,6 @@ const Main = ({ isHome, showBG = false, children }) => {
           <img src={cr7SVG} alt="cr7svg.svg" className="main-bg-image" />
         </div>
       )}
-
       {children}
 
       <div className="card-3">

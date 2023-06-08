@@ -69,7 +69,7 @@ iframe {
 @media (max-width: 1650px) {
   iframe {
     left: -200px;
-    width: 130%;
+    width: 138%;
   }
 }
 
@@ -82,6 +82,7 @@ iframe {
 
 @media (max-width: 1000px) {
   iframe {
+    top: -150px;
     left: -450px;
     width: 250%;
   }
@@ -104,8 +105,22 @@ iframe {
 
 @media (max-width: 450px) {
   iframe {
+    top: -170px;
     left: -200px;
     width: 250%;
+  }
+
+  .bg-image {
+    height: 40vh;
+  }
+}
+
+
+@media (max-width: 280px) {
+  iframe {
+    
+    left: -200px;
+    width: 320%;
   }
 
   .bg-image {
