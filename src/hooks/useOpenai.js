@@ -1,5 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
+import toast from "react-hot-toast";
 
 const baseURL = "https://api.openai.com/v1/chat/completions";
 const apiKey = import.meta.env.VITE_OPENAI_API_KEY;
@@ -43,7 +44,8 @@ const useOpenai = (question) => {
         setText(responseModel);
       })
       .catch((error) => {
-        console.log(error);
+        toast.error(error.response.data.error.message || "Error");
+        console.log('hola',error);
       });
   };
 
