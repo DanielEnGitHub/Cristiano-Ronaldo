@@ -7,6 +7,7 @@ const Main = ({ isHome, showBG = false, children }) => {
 
   const pathInformation = pathname.includes("/information");
   const pathPhrase = pathname.includes("/phrase");
+  const pathExtra = pathname.includes("/extra");
 
   return (
     <div className={isHome ? "main-bg-home" : "main-bg"}>
@@ -35,6 +36,9 @@ const Main = ({ isHome, showBG = false, children }) => {
           </Link>
           <Link className={pathPhrase ? "navigation-active" : ""} to="/phrase">
             FRASES
+          </Link>
+          <Link className={pathExtra ? "navigation-active" : ""} to="/extra">
+            EXTRA
           </Link>
         </div>
       </div>
