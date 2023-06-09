@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 import { cr7SVG } from "../utils/image";
 
 const Main = ({ isHome, showBG = false, children }) => {
-  const { pathname } = window.location;
+  const { hash } = window.location;
 
-  const pathInformation = pathname.includes("/information");
-  const pathPhrase = pathname.includes("/phrase");
-  const pathExtra = pathname.includes("/extra");
+  const pathInformation = hash.includes("#/information");
+  const pathPhrase = hash.includes("#/phrase");
+  const pathExtra = hash.includes("#/extra");
 
   return (
     <div className={isHome ? "main-bg-home" : "main-bg"}>
@@ -22,7 +22,9 @@ const Main = ({ isHome, showBG = false, children }) => {
         <div className="card-3-content" style={{ zIndex: 1 }}>
           <Link
             className={
-              !pathInformation && !pathPhrase && !pathExtra ? "navigation-active" : ""
+              !pathInformation && !pathPhrase && !pathExtra
+                ? "navigation-active"
+                : ""
             }
             to="/"
           >
