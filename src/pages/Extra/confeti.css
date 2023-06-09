@@ -1,0 +1,11 @@
+.canvas{
+    position: absolute;
+    min-height: 100vh;
+    min-width: 100px;
+    z-index: 1;
+}
+
+.main-extra{
+    position: relative;
+    overflow: hidden !important;
+}

@@ -2,14 +2,19 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { cr7ExtraSVG } from "../../utils/image";
 import "./extra.css";
+import "./confeti.css";
+import ConfettiCanvas from "./ConfettiCanvas/ConfettiCanvas";
 
 const Extra = () => {
-  const [text, setText] = useState("SIUUUUUU");
+  const [text, setText] = useState("");
   const handleInputChange = (event) => {
     setText(event.target.value);
   };
   return (
-    <>
+    <div className="main-extra">
+      {(text.toUpperCase().includes("ARIANNA") ||
+        (text.toUpperCase().includes("ARI") &&
+          text.toUpperCase().includes("SIU"))) && <ConfettiCanvas />}
       <div className="content-link">
         <Link className={"link"} to="/">
           INICIO
@@ -28,7 +33,7 @@ const Extra = () => {
           placeholder="Escribe cualquier cosa"
         />
       </div>
-    </>
+    </div>
   );
 };
 
