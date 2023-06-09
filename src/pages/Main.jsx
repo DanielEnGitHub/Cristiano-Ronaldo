@@ -22,7 +22,7 @@ const Main = ({ isHome, showBG = false, children }) => {
         <div className="card-3-content" style={{ zIndex: 1 }}>
           <Link
             className={
-              !pathInformation && !pathPhrase ? "navigation-active" : ""
+              !pathInformation && !pathPhrase && !pathExtra ? "navigation-active" : ""
             }
             to="/"
           >

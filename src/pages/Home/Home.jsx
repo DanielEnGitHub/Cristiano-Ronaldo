@@ -1,5 +1,4 @@
 import React from "react";
-import YouTube from "react-youtube";
 import { cr7PNG } from "../../utils/image";
 import "./home.css";
 import YouTubePlayer from "./YouTubePlayer";
