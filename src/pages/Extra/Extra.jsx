@@ -8,12 +8,10 @@ const Extra = () => {
   const handleInputChange = (event) => {
     setText(event.target.value);
   };
-  const { pathname } = window.location;
-  const pathExtra = pathname.includes("/extra");
   return (
     <>
       <div className="content-link">
-        <Link className={`link ${pathExtra ? "navigation-active" : ""}`} to="/">
+        <Link className={"link"} to="/">
           INICIO
         </Link>
       </div>
