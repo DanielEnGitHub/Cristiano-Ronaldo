@@ -74,3 +74,12 @@ export const information = [
   "Ha ganado múltiples títulos de liga y copas nacionales en las ligas en las que ha jugado.",
   "Cristiano Ronaldo es reconocido por su velocidad, potencia física y habilidades técnicas, lo que le ha permitido destacar en diferentes equipos y ligas a lo largo de su carrera.",
 ];
+
+import cr7_1 from "../assets/images/ronaldo/cr7-1.png";
+import cr7_2 from "../assets/images/ronaldo/cr7-3.png";
+import cr7_3 from "../assets/images/ronaldo/cr7-7.png";
+import cr7_4 from "../assets/images/ronaldo/cr7-4.png";
+import cr7_5 from "../assets/images/ronaldo/cr7-8.png";
+import cr7_6 from "../assets/images/ronaldo/cr7-6.png";
+
+export const images = [cr7_1, cr7_2, cr7_3, cr7_4, cr7_5, cr7_6];
