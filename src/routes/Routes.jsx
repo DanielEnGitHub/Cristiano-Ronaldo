@@ -33,14 +33,7 @@ const Routes = () => {
           </Main>
         }
       />
-      <Route
-        path="/extra"
-        element={
-          <Main isHome>
-            <Extra />
-          </Main>
-        }
-      />
+      <Route path="/extra" element={<Extra />} />
     </RRoute>
   );
 };

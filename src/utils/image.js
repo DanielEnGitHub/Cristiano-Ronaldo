@@ -9,6 +9,7 @@ import cr7_7 from "../assets/images/ronaldo/cr7-7.png";
 import cr7_8 from "../assets/images/ronaldo/cr7-8.png";
 
 // fondo
+import cr7ExtraSVG from "../assets/images/cr7Extra.svg";
 import cr7SVG from "../assets/images/cr7svg.svg";
 import cr7PNG from "../assets/images/cr7.png";
 
@@ -23,4 +24,5 @@ export {
   cr7_8,
   cr7SVG,
   cr7PNG,
+  cr7ExtraSVG,
 };
