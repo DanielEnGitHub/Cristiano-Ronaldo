@@ -1,5 +1,5 @@
 import React from "react";
-import { Routes as RRoute, Route } from "react-router-dom";
+import { HashRouter as RRoute, Route } from "react-router-dom";
 import Date from "../pages/Date";
 import Extra from "../pages/Extra";
 import Home from "../pages/Home/Home";
