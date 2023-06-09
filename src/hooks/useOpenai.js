@@ -1,7 +1,10 @@
 import { useState } from "react";
 import axios from "axios";
 import toast from "react-hot-toast";
-import { useSetToggleContext } from "../components/Context/Contex";
+import {
+  useSetApiErrorContext,
+  useSetToggleContext,
+} from "../components/Context/Contex";
 
 const baseURL = "https://api.openai.com/v1/chat/completions";
 const apiKey = import.meta.env.VITE_OPENAI_API_KEY;
@@ -11,6 +14,7 @@ const temperature = 0.6; // Configura la temperatura aquí
 const useOpenai = (question) => {
   const [text, setText] = useState("");
   const setToggle = useSetToggleContext();
+  const setApiError = useSetApiErrorContext();
 
   async function generarRespuesta() {
     try {
@@ -45,11 +49,13 @@ const useOpenai = (question) => {
   const getResponse = () => {
     generarRespuesta()
       .then((responseModel) => {
+        setApiError(false);
         setText(responseModel);
       })
       .catch((error) => {
+        setApiError(true);
         toast.error(error.response.data.error.message || "Error");
-        console.log("hola", error);
+        console.log(error);
       })
       .finally(() => {
         setToggle(false);
