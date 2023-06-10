@@ -9,6 +9,8 @@ import "./css/extra.css";
 import "./css/confeti.css";
 import "./css/gift.css";
 import YouTubePlayer from "../Home/YouTubePlayer";
+import useRandom from "../../hooks/useRandom";
+import { videosYT } from "../../utils/Content";
 
 const Extra = () => {
   const [text, setText] = useState("");
@@ -17,15 +19,29 @@ const Extra = () => {
     setText(event.target.value);
   };
 
+  const { generateRandom, genereteRandonFunc } = useRandom(videosYT, 0, 39);
+
+  const onOpen = () => {
+    setIsOpen(!isOpen);
+    genereteRandonFunc();
+  };
+
   return (
     <>
       <div className="main-extra">
+        {isOpen && (
+          <YouTubePlayer
+            className={"reel"}
+            mute={false}
+            videoID={generateRandom}
+          />
+        )}
 
         {(text.toUpperCase().includes("ARIANNA") ||
           (text.toUpperCase().includes("ARI") &&
             text.toUpperCase().includes("SIU"))) && (
           <>
-            <Gift onClick={() => setIsOpen(!isOpen)} />
+            <Gift onClick={onOpen} />
             <ConfettiCanvas />
           </>
         )}
