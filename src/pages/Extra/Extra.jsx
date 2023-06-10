@@ -15,7 +15,9 @@ import { videosYT } from "../../utils/Content";
 const Extra = () => {
   const [text, setText] = useState("");
   const [isOpen, setIsOpen] = useState(false);
+  const [closeGift, setCloseGift] = useState(false);
   const handleInputChange = (event) => {
+    setCloseGift(false);
     setText(event.target.value);
   };
 
@@ -37,14 +39,15 @@ const Extra = () => {
           />
         )}
 
-        {(text.toUpperCase().includes("ARIANNA") ||
-          (text.toUpperCase().includes("ARI") &&
-            text.toUpperCase().includes("SIU"))) && (
-          <>
-            <Gift onClick={onOpen} />
-            <ConfettiCanvas />
-          </>
-        )}
+        {!closeGift &&
+          (text.toUpperCase().includes("ARIANNA") ||
+            (text.toUpperCase().includes("ARI") &&
+              text.toUpperCase().includes("SIU"))) && (
+            <>
+              <Gift onClick={onOpen} setCloseGift={setCloseGift} />
+              <ConfettiCanvas />
+            </>
+          )}
         <div className="content-link">
           <Link className={"link"} to="/">
             INICIO
