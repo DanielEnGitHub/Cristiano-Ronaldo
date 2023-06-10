@@ -114,9 +114,9 @@ const ConfettiCanvas = () => {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      // Detener la animación después de 8 segundos
+      // Detener la animación después de 4 segundos
       confetti = [];
-    }, 8000);
+    }, 4000);
 
     return () => clearTimeout(timer);
   }, []);
