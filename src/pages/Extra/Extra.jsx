@@ -44,7 +44,11 @@ const Extra = () => {
             (text.toUpperCase().includes("ARI") &&
               text.toUpperCase().includes("SIU"))) && (
             <>
-              <Gift onClick={onOpen} setCloseGift={setCloseGift} />
+              <Gift
+                onClick={onOpen}
+                setCloseGift={setCloseGift}
+                setIsOpen={setIsOpen}
+              />
               <ConfettiCanvas />
             </>
           )}

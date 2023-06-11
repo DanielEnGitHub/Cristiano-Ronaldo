@@ -1,6 +1,6 @@
 import React from "react";
 
-const Gift = ({ onClick = () => {}, setCloseGift }) => {
+const Gift = ({ onClick = () => {}, setCloseGift, setIsOpen }) => {
   return (
     <div className="content-gift">
       <div className="birthday-gift">
@@ -19,7 +19,10 @@ const Gift = ({ onClick = () => {}, setCloseGift }) => {
               zIndex: 1,
               cursor: "pointer",
             }}
-            onClick={() => setCloseGift(true)}
+            onClick={() => {
+              setCloseGift(true);
+              setIsOpen(false);
+            }}
           ></div>
         </div>
       </div>
